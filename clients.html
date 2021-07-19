@@ -1,0 +1,101 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <a href="index.html">Home page</a>
+    </div>
+    <fieldset>
+        <h1>
+            Enter a new Client
+        </h1>
+    <h1>Add Client</h1>
+    <form id="addClient">
+        <label>First Name: <input type="text" name="fName" id="fName"></label>
+        <label>Last Name: <input type="text" name="lName" id="lName"></label>
+        <label>Address: <input type="text" name="clientAddress" id="clientAddress"></label>
+        <label>Phone #: <input type="text" name="clientPhone" id="clientPhone"></label>
+
+        <input type="submit" value="submit">
+    </form>
+    <p></p>
+
+    <h1>Update Client</h1>
+    <form id="updateClient">
+        <label>ID (Required): <input type="number" name="clientID" id="clientID"></label>
+        <label>First Name: <input type="text" name="fName" id="fName"></label>
+        <label>Last Name: <input type="text" name="lName" id="lName"></label>
+        <label>Address: <input type="text" name="clientAddress" id="clientAddress"></label>
+        <label>Phone #: <input type="text" name="clientPhone" id="clientPhone"></label>
+
+        <input type="submit" value="submit">
+
+    </form>
+    <p></p>
+
+    <h1>Delete Client</h1>
+    <form id="deleteClient">
+        <label>ID: <input type="number" name="clientID" id="clientID"></label>
+        <input type="submit" value="submit">
+
+    </form>
+    <p></p>
+
+    <h1>Clients</h1>
+    <!-- Table of data-->
+    <!-- have to build with JavaScript-->
+    <!--Rows with id, name, reps, weight, unit, date, update button, delete button-->
+    <!--put and delete-->
+    <!--approach with event delegation at www.javascript.info/event-delegation -->
+    <form id="dataTable">
+    <thead>
+        <tr>
+            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
+            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
+            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
+            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
+            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </form>
+<script>
+    const makeTable = (tableData) => {
+    //iterate over the rows
+    //Add table data cells each with the data for that column
+    //Add the buttons
+
+    var headerArray = ["ID", "First Name", "Last Name", "Address", "Phone #"];
+    sqlTable = document.getElementById("dataTable");
+    var tableHead = document.createElement("thead");
+    var headerRow = document.createElement("tr");
+
+    //will populate the table header
+    for (var c = 0; c<5; c++){
+        var headerCell = document.createElement("th");
+        headerCell.style.borderStyle = "solid";
+        headerCell.style.borderWidth = "thin";
+        headerCell.style.padding = "20px";
+        headerCell.textContent = headerArray[c];
+        headerRow.appendChild(headerCell);
+    }
+    tableHead.appendChild(headerRow);
+    sqlTable.appendChild(tableHead);
+
+    var tableBody = document.createElement("tbody");
+
+
+    //appends the table into the page body
+    sqlTable.appendChild(tableBody);
+    };
+    document.addEventListener('DOMContentLoaded', makeTable);
+</script>
+</body>
+</html>
