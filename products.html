@@ -12,7 +12,7 @@
     </div>
     <fieldset>
         <h1>
-            Enter a new Product
+            Products
         </h1>
     <h1>Add Product</h1>
     <form id="addProduct">
@@ -43,37 +43,24 @@
     <p></p>
 
     <h1>Products</h1>
-    <!-- Table of data-->
-    <!-- have to build with JavaScript-->
-    <!--Rows with id, name, reps, weight, unit, date, update button, delete button-->
-    <!--put and delete-->
-    <!--approach with event delegation at www.javascript.info/event-delegation -->
     <form id="dataTable">
     <thead>
         <tr>
             <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
             <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
             <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
         </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
+    </thead>
     </form>
 <script>
     const makeTable = (tableData) => {
-    //iterate over the rows
-    //Add table data cells each with the data for that column
-    //Add the buttons
 
     var headerArray = ["ID", "Item", "Cost"];
     sqlTable = document.getElementById("dataTable");
     var tableHead = document.createElement("thead");
     var headerRow = document.createElement("tr");
 
-    //will populate the table header
-    for (var c = 0; c<5; c++){
+    for (var c = 0; c<3; c++){
         var headerCell = document.createElement("th");
         headerCell.style.borderStyle = "solid";
         headerCell.style.borderWidth = "thin";
