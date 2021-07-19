@@ -12,9 +12,9 @@
     </div>
     <fieldset>
         <h1>
-            Enter a new Client
+            Clients
         </h1>
-    <h1>Add Client</h1>
+    <h2>Add Client</h2>
     <form id="addClient">
         <label>First Name: <input type="text" name="fName" id="fName"></label>
         <label>Last Name: <input type="text" name="lName" id="lName"></label>
@@ -25,7 +25,7 @@
     </form>
     <p></p>
 
-    <h1>Update Client</h1>
+    <h2>Update Client</h2>
     <form id="updateClient">
         <label>ID (Required): <input type="number" name="clientID" id="clientID"></label>
         <label>First Name: <input type="text" name="fName" id="fName"></label>
@@ -38,7 +38,7 @@
     </form>
     <p></p>
 
-    <h1>Delete Client</h1>
+    <h2>Delete Client</h2>
     <form id="deleteClient">
         <label>ID: <input type="number" name="clientID" id="clientID"></label>
         <input type="submit" value="submit">
@@ -46,7 +46,7 @@
     </form>
     <p></p>
 
-    <h1>Clients</h1>
+    <h2>Clients</h2>
     <!-- Table of data-->
     <!-- have to build with JavaScript-->
     <!--Rows with id, name, reps, weight, unit, date, update button, delete button-->
@@ -55,16 +55,10 @@
     <form id="dataTable">
     <thead>
         <tr>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
-            <th style="border-style: solid; border-width: thin; padding: 20px;"></th>
         </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
+    </thead>
+    <tbody>
+    </tbody>
     </form>
 <script>
     const makeTable = (tableData) => {
