@@ -1,0 +1,75 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <a href="index.html">Home page</a>
+    </div>
+    <fieldset>
+        <h1>
+            Order Products
+        </h1>
+    <h2>Add Order Products</h2>
+    <form id="addOrderProducts">
+        <label>productID: <input type="text" name="productID" id="productID"></label>
+        <label>orderID: <input type="text" name="orderID" id="orderID"></label>
+    
+        <input type="submit" value="submit">
+    </form>
+    <p></p>
+
+    <h2>Update Order Products</h2>
+    <form id="updateOrderProducts">
+        <label>productID: <input type="text" name="productID" id="productID"></label>
+        <label>orderID: <input type="text" name="orderID" id="orderID"></label>
+
+        <input type="submit" value="submit">
+
+    </form>
+    <p></p>
+
+    <h2>Delete Order Products</h2>
+    <form id="deleteOrderProducts">
+        <label>productID, orderID: <input type="number" name="orderID" id="orderID"></label>
+        <input type="submit" value="submit">
+
+    </form>
+    <p></p>
+
+    <h2>Orders Products</h2>
+    <form id="dataTable">
+    </form>
+<script>
+    const makeTable = (tableData) => {
+
+    var headerArray = ["productID", "orderID"];
+    sqlTable = document.getElementById("dataTable");
+    var tableHead = document.createElement("thead");
+    var headerRow = document.createElement("tr");
+
+    for (var c = 0; c<4; c++){
+        var headerCell = document.createElement("th");
+        headerCell.style.borderStyle = "solid";
+        headerCell.style.borderWidth = "thin";
+        headerCell.style.padding = "20px";
+        headerCell.textContent = headerArray[c];
+        headerRow.appendChild(headerCell);
+    }
+    tableHead.appendChild(headerRow);
+    sqlTable.appendChild(tableHead);
+
+    var tableBody = document.createElement("tbody");
+
+
+    //appends the table into the page body
+    sqlTable.appendChild(tableBody);
+    };
+    document.addEventListener('DOMContentLoaded', makeTable);
+</script>
+</body>
+</html>
